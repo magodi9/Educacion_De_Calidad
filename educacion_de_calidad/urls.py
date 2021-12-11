@@ -22,6 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', TokenObtainPairView.as_view()), # use credentials to return tokens
     path('refresh/', TokenRefreshView.as_view()), # generate new access token
-    path('user/', educationViews.UsuarioCreateView .as_view()),
+    path('user/', educationViews.UsuarioCreateView.as_view()),
     path('user/<int:pk>/',educationViews.UsuarioDetailView.as_view()),
+    path('proyecto',educationViews.ProyectoCreateView.as_view()),
+
 ]

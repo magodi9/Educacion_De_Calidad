@@ -99,10 +99,10 @@ WSGI_APPLICATION = 'educacion_de_calidad.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd1ll3vghb8vm91',
-        'USER': 'qsugugdvjqfquw',
-        'PASSWORD': 'a3968d5c9803c0c352e45293410b7a2f64952048a80ad5381728e021f2f255a5',
-        'HOST': 'ec2-3-228-75-39.compute-1.amazonaws.com',
+        'NAME': 'd6man1il7qfdtm',
+        'USER': 'zgutbkhmrjdven',
+        'PASSWORD': '39d3ee66b2866d8119a83643300a59d1b14e6ffc87499914fb8944f9f683d52f',
+        'HOST': 'ec2-52-201-106-191.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }

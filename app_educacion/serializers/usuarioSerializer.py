@@ -1,13 +1,13 @@
-from app_educacion.models.usuarioModel import Usuario
+from app_educacion.models.usuarioModel import User
 from rest_framework import serializers
 
 class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Usuario
+        model = User
         fields = ['cedula' ,'nombre','correo_electronico','direccion','password','departamento','municipio_de_residencia','perfil']
         
         def to_representation(self,obj):
-            usuarioData = Usuario.objects.get(cedula=obj.cedula)
+            usuarioData = User.objects.get(cedula=obj.cedula)
             return{
                 'cedula'                   : usuarioData.cedula                  ,
                 'nombre'                   : usuarioData.nombre                  ,

@@ -1,13 +1,14 @@
 from django.conf                                 import settings
+from django.contrib.auth.models import User
 from rest_framework                              import generics, status
 from rest_framework.response                     import Response
 from rest_framework.permissions                  import IsAuthenticated
 from rest_framework_simplejwt.backends           import TokenBackend
-from app_educacion.models.usuarioModel           import Usuario
+from app_educacion.models.usuarioModel           import User
 from app_educacion.serializers.usuarioSerializer import UsuarioSerializer
 
 class UsuarioDetailView(generics.RetrieveAPIView):
-    queryset           = Usuario.objects.all()
+    queryset           = User.objects.all()
     serializer_class   = UsuarioSerializer
     permission_classes = (IsAuthenticated,)
 

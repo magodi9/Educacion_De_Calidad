@@ -10,4 +10,4 @@ class ProyectoCreateView(views.APIView):
         serializer.save()
 
        
-        return Response(serializer.data)
+        return serializer.data
