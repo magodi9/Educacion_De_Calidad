@@ -1,5 +1,6 @@
 from django.http.request import RAISE_ERROR
 from rest_framework import status, views
+from rest_framework.response import Response
 
 from app_educacion.serializers.proyectoSerializer   import ProyectoSerializer
 
@@ -10,4 +11,4 @@ class ProyectoCreateView(views.APIView):
         serializer.save()
 
        
-        return serializer.data
+        return Response(serializer.data)
