@@ -1,0 +1,2 @@
+from app_educacion.serializers.proyectoSerializer import ProyectoSerializer
+from app_educacion.serializers.usuarioSerializer import UsuarioSerializer

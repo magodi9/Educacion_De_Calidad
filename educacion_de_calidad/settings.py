@@ -68,9 +68,10 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES':(
-                 'rest_framework_simplejwt.authentication.JWTAuthentication'
+                 'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 }
+AUTH_USER_MODEL = 'app_educacion.User'
 ROOT_URLCONF = 'educacion_de_calidad.urls'
 
 TEMPLATES = [
@@ -97,8 +98,12 @@ WSGI_APPLICATION = 'educacion_de_calidad.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd1ll3vghb8vm91',
+        'USER': 'qsugugdvjqfquw',
+        'PASSWORD': 'a3968d5c9803c0c352e45293410b7a2f64952048a80ad5381728e021f2f255a5',
+        'HOST': 'ec2-3-228-75-39.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 

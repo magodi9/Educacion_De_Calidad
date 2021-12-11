@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app_educacion import views as educationViews
+from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/', TokenObtainPairView.as_view()), # use credentials to return tokens
+    path('refresh/', TokenRefreshView.as_view()), # generate new access token
+    path('user/', educationViews.UsuarioCreateView .as_view()),
+    path('user/<int:pk>/',educationViews.UsuarioDetailView.as_view()),
 ]
