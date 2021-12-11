@@ -1,0 +1,3 @@
+from app_educacion.views.proyectoCreateView import ProyectoCreateView
+from app_educacion.views.usuarioCreateView import UsuarioCreateView
+from app_educacion.views.usuarioDetailViews import UsuarioDetailView
